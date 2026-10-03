@@ -38,7 +38,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 58svh;
+  min-height: clamp(300px, 42svh, 480px);
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -101,44 +101,6 @@ main {
   width: min(960px, calc(100% - 24px));
   margin: -22px auto 36px;
   position: relative;
-}
-
-.mode-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.mode-card {
-  display: grid;
-  gap: 8px;
-  min-height: 168px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-  text-decoration: none;
-  box-shadow: var(--shadow);
-}
-
-.mode-card span {
-  font-weight: 900;
-}
-
-.mode-card strong {
-  font-size: clamp(1.8rem, 7vw, 3.2rem);
-  line-height: 1.08;
-}
-
-.mode-card small {
-  color: var(--muted);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.mode-card--story {
-  background: linear-gradient(135deg, #fffef8, var(--green-soft));
 }
 
 .panel {
@@ -340,14 +302,6 @@ footer {
 }
 
 @media (max-width: 720px) {
-  .mode-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mode-card {
-    min-height: 140px;
-  }
-
   .story-card__photo {
     min-height: 124px;
   }
