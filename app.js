@@ -91,6 +91,16 @@ const storyItems = [
   },
   {
     day: "10/28",
+    type: "transport",
+    title: "日田站前等候飯店接駁車",
+    time: "16:15",
+    city: "日田站 / 奧日田溫泉",
+    image: "./assets/images/hita-station-shuttle.webp",
+    description:
+      "15:53 抵達日田後，在火車站前等候飯店接駁車，前往奧日田溫泉 梅響。從車站轉進山谷，溫泉之夜就要開始。"
+  },
+  {
+    day: "10/28",
     type: "hotel",
     title: "奧日田溫泉 梅響",
     time: "17:40 抵達",
@@ -105,12 +115,42 @@ const storyItems = [
       "位於大分縣日田市大山町、響溪谷旁的溫泉旅館，以「梅之鄉」大山的自然與梅文化為主題。最大魅力是壯闊的山谷景觀，從客房、露天風呂與寢湯都能眺望層疊山林。這裡不只是住宿點，本身就是旅程中的主要目的地。"
   },
   {
+    day: "10/28",
+    type: "food",
+    title: "梅響飯店日式和牛懷石晚餐",
+    time: "18:00",
+    city: "奧日田溫泉 梅響",
+    image: "./assets/images/umehibiki-dinner.webp",
+    description:
+      "今晚在奧日田溫泉 梅響飯店享用日式和牛懷石料理。從趕路轉為慢慢品味九州的季節料理，替第一天畫下溫暖的句點。照片為飯店料理示意，實際菜色依當日供應為準。"
+  },
+  {
+    day: "10/29",
+    type: "food",
+    title: "梅響飯店日式包廂早餐",
+    time: "08:00",
+    city: "奧日田溫泉 梅響",
+    image: "./assets/images/umehibiki-breakfast.webp",
+    description:
+      "在飯店的日式包廂享用早餐，從一桌細緻的日式餐點開始新的一天。照片為飯店早餐示意，實際菜色依當日供應為準。"
+  },
+  {
+    day: "10/29",
+    type: "transport",
+    title: "飯店接駁車前往日田站",
+    time: "11:00",
+    city: "奧日田溫泉 梅響 / 日田",
+    image: "./assets/images/umehibiki-entrance.webp",
+    description:
+      "從梅響飯店搭乘接駁車返回日田站，再前往日田 Bus Terminal，準備搭乘 12:05 往天神的高速巴士。"
+  },
+  {
     day: "10/29",
     type: "transport",
     title: "日田往天神高速巴士",
     time: "12:05-13:39",
     city: "日田 / 福岡",
-    image: "./assets/images/hita-bus-center.webp",
+    image: "./assets/images/hita-highway-bus-2026.webp",
     description:
       "從日田 Bus Terminal 搭乘高速巴士前往西鐵天神高速 Bus Terminal，抵達後穿過天神三越與地下街前往飯店。"
   },

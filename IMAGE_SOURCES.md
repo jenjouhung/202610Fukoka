@@ -47,11 +47,38 @@ This site combines images exported from the trip planning Google Doc with a few 
   - URL: https://commons.wikimedia.org/wiki/File:Sunset_view_from_an_airplane_window_above_the_clouds.jpg
 
 - `assets/images/hita-bus-center.webp`
-  - Used for: 日田往天神高速巴士
+  - Previously used for 日田往天神高速巴士; retained but no longer shown
   - Source: Wikimedia Commons, "Hita-bussenter.jpg"
   - Author: 藻南官舍前
   - License: CC BY-SA 3.0
   - URL: https://commons.wikimedia.org/wiki/File:Hita-bussenter.jpg
+
+- `assets/images/hita-station-shuttle.webp`
+  - Used for: 10/28 日田站前等候飯店接駁車
+  - Source: Wikimedia Commons, "Hita Station 20161231.jpg" (station photo, not the shuttle vehicle)
+  - Author: そらみみ
+  - License: CC BY-SA 4.0; resized and converted to WebP
+  - URL: https://commons.wikimedia.org/wiki/File:Hita_Station_20161231.jpg
+
+- `assets/images/umehibiki-dinner.webp`
+  - Used for: 10/28 梅響飯店日式和牛懷石晚餐
+  - Source: Okuhita Onsen Umehibiki official website (representative cuisine; actual menu may vary)
+  - URL: https://www.umehibiki.jp/en/files/images/home/img_cuisine.png
+
+- `assets/images/umehibiki-breakfast.webp`
+  - Used for: 10/29 梅響飯店日式包廂早餐
+  - Source: Okuhita Onsen Umehibiki official website (representative breakfast; actual menu may vary)
+  - URL: https://www.umehibiki.jp/en/dishes/images/img_breakfast01.jpg
+
+- `assets/images/umehibiki-entrance.webp`
+  - Used for: 10/29 飯店接駁車前往日田站
+  - Source: Okuhita Onsen Umehibiki official photo gallery (hotel entrance, not the shuttle vehicle)
+  - URL: https://www.umehibiki.jp/resources/images/photo-gallery/photo1-12.jpg
+
+- `assets/images/hita-highway-bus-2026.webp`
+  - Used for: 10/29 日田往天神高速巴士
+  - Source: コウさんのコウ通大百科 PART 3, 2026 article on the Fukuoka-Hita "ひた号" (representative vehicle, not the trip's bus)
+  - URL: https://ameblo.jp/kousan197725/entry-12965319944.html
 
 ## Trip Document Images
 
