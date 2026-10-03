@@ -28,7 +28,7 @@ const storyItems = [
     title: "A 團出發與搭機時間",
     time: "04:00 板橋出發；06:50 CI110",
     city: "桃園 / 福岡",
-    image: "./assets/images/hero-yufuin-train.jpg",
+    image: "./assets/images/taoyuan-t2-checkin.jpg",
     description:
       "A 團 04:00 板橋機場接送出發，04:30 抵達桃園機場，05:00 Check-in 完成並協助 B 團 Check-in，05:30 最晚入關，06:10 登機。06:50 搭乘華航 CI110 自桃園機場第二航廈出發，10:00 抵達福岡。"
   },
@@ -38,7 +38,7 @@ const storyItems = [
     title: "B 團出發與搭機時間",
     time: "04:00 基隆出發；08:10 BR106",
     city: "桃園 / 福岡",
-    image: "./assets/images/hero-yufuin-train.jpg",
+    image: "./assets/images/taoyuan-t2-eva-checkin.jpg",
     description:
       "B 團 04:00 基隆接送出發，05:45 抵達桃園機場。Check-in 地點為第二航廈 18 號櫃台特別服務櫃台。08:10 搭乘長榮 BR106 自桃園機場第二航廈出發，座位 28D、28E，11:15 抵達福岡。"
   },
@@ -48,7 +48,7 @@ const storyItems = [
     title: "抵達福岡機場",
     time: "A 團 10:00；B 團 11:15",
     city: "福岡",
-    image: "./assets/images/hero-yufuin-train.jpg",
+    image: "./assets/images/fukuoka-airport-terminal.jpg",
     description:
       "兩團分別搭乘華航 CI110 與長榮 BR106 抵達福岡，12:00 在福岡機場 12 號柱集合，使用 Uber 或 GO 叫 Taxi XL 前往 KITTE 博多。"
   },
@@ -99,7 +99,7 @@ const storyItems = [
     title: "日田往天神高速巴士",
     time: "12:05-13:39",
     city: "日田 / 福岡",
-    image: "./assets/images/tenjin-bus-terminal-route-1.png",
+    image: "./assets/images/hita-bus-center.jpg",
     description:
       "從日田 Bus Terminal 搭乘高速巴士前往西鐵天神高速 Bus Terminal，抵達後穿過天神三越與地下街前往飯店。"
   },
