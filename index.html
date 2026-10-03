@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026.10.28-11.02 福岡樂齡散心之旅</title>
+    <meta
+      name="description"
+      content="2026.10.28-11.02 福岡樂齡散心之旅，每日行程重點與快速地圖導航。"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20261003-initial" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__image" role="img" aria-label="九州山林、溫泉、城市與親子旅遊印象"></div>
+      <div class="hero__content">
+        <p class="eyebrow">2026.10.28-11.02</p>
+        <h1>福岡樂齡散心之旅</h1>
+        <p>在此理解旅程的完整重點資訊，並快速開啟景點位置與交通導航。</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="mode-grid" aria-label="網站功能">
+        <a class="mode-card mode-card--story" href="#story">
+          <span>旅程總覽</span>
+          <strong>每日行程重點</strong>
+          <small>航班、交通、住宿、景點背景與當日節奏。</small>
+        </a>
+        <a class="mode-card mode-card--nav" href="#nav">
+          <span>快速導航</span>
+          <strong>景點地圖導航</strong>
+          <small>住宿、景點、美食、交通點與日期篩選。</small>
+        </a>
+      </section>
+
+      <section id="story" class="panel panel--story">
+        <div class="section-heading">
+          <p class="eyebrow">旅程理解模式</p>
+          <h2>每日行程重點</h2>
+        </div>
+        <div class="filter-row" id="storyDayFilters" aria-label="旅程總覽日期篩選"></div>
+        <div class="filter-row filter-row--type" id="storyTypeFilters" aria-label="旅程總覽類別篩選"></div>
+        <div class="story-list" id="storyList"></div>
+      </section>
+
+      <section id="nav" class="panel panel--nav">
+        <div class="section-heading">
+          <p class="eyebrow">快速導航</p>
+          <h2>景點地圖導航</h2>
+        </div>
+
+        <label class="search-box">
+          <span>搜尋</span>
+          <input id="searchInput" type="search" placeholder="輸入城市、地點、日文或關鍵字" />
+        </label>
+
+        <div class="filter-row" id="typeFilters" aria-label="地點類別篩選"></div>
+        <div class="filter-row filter-row--day" id="dayFilters" aria-label="日期篩選"></div>
+
+        <div class="location-list" id="locationList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>來源：Google Doc「2026.10.福岡行程」。本頁不放護照、生日、身分證等個資。</p>
+    </footer>
+
+    <script src="./app.js?v=20261003-initial"></script>
+  </body>
+</html>
