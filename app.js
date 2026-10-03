@@ -23,7 +23,7 @@ const storyItems = [
   {
     day: "10/28",
     type: "transport",
-    title: "A 團出發與搭機時間",
+    title: "A團出發(振洲、筱嵐、紹齊)",
     time: "04:00 板橋出發；06:50 CI110",
     city: "桃園 / 福岡",
     image: "./assets/images/taoyuan-t2-checkin.jpg",
@@ -31,24 +31,24 @@ const storyItems = [
       "04:00 板橋機場接送出發",
       "04:30 抵達桃園機場",
       "05:00 Check-in 完成，並協助 B 團 Check-in",
-      "05:30 最晚入關",
+      "05:30 最晚入關時間",
       "06:10 登機",
-      "06:50 搭乘華航 CI110 自桃園機場第二航廈出發",
+      "06:50 搭乘華航 CI110",
       "10:00 抵達福岡"
     ]
   },
   {
     day: "10/28",
     type: "transport",
-    title: "B 團出發與搭機時間",
+    title: "B 團出發(旺哥、秋霞)",
     time: "04:00 基隆出發；08:10 BR106",
     city: "桃園 / 福岡",
-    image: "./assets/images/taoyuan-t2-eva-checkin.jpg",
+    image: "./assets/images/br106-departing-taoyuan-2026.jpg",
     details: [
       "04:00 基隆接送出發",
       "05:45 抵達桃園機場",
-      "Check-in 地點：第二航廈 18 號櫃台特別服務櫃台",
-      "08:10 搭乘長榮 BR106 自桃園機場第二航廈出發",
+      "Check-in 地點：第二航廈（18 號特別服務櫃台)",
+      "08:10 搭乘長榮 BR106",
       "座位：28D、28E",
       "11:15 抵達福岡"
     ]
@@ -59,9 +59,9 @@ const storyItems = [
     title: "抵達福岡機場",
     time: "A 團 10:00；B 團 11:15",
     city: "福岡",
-    image: "./assets/images/fukuoka-airport-terminal.jpg",
+    image: "./assets/images/fukuoka-airport-international-2026.jpg",
     description:
-      "兩團分別搭乘華航 CI110 與長榮 BR106 抵達福岡，12:00 在福岡機場 12 號柱集合，使用 Uber 或 GO 叫 Taxi XL 前往 KITTE 博多。"
+      "兩團分別搭乘華航 CI110 與長榮 BR106 抵達福岡，12:00 在福岡機場 入境大廳集合，叫 Taxi 前往 KITTE 博多。"
   },
   {
     day: "10/28",
@@ -144,10 +144,10 @@ const storyItems = [
     description:
       "天神地下街是福岡天神地區重要的地下商業與交通動線，全長約 590 公尺，串聯地下鐵天神站、天神南站、西鐵福岡站與周邊百貨。以 19 世紀歐洲街道為設計意象，也是雨天逛天神最好用的移動通道。",
     details: [
-      "先逛天神地下街：服飾、雜貨與甜點集中；一般商店多營業至 20:00。",
-      "mina 天神：B1F 逛 3COINS＋plus，1–2F 逛 UNIQLO，3F 逛 GU。",
-      "無印良品在旁邊的天神 Shoppers Fukuoka 2F；藥妝可到 mina 天神 B1F 松本清。",
-      "晚間若還想採買，可再前往唐吉訶德天神西通店。"
+      "建議逛法：",
+      "先去：mina 天神：B1F 逛 3COINS＋plus，1–2F 逛 UNIQLO，3F 逛 GU。",
+      "然後：無印良品在旁邊的天神 Shoppers Fukuoka 2F",
+      "藥妝可到 住宿附近 PARCO B2 Welca"
     ]
   },
   {
@@ -184,10 +184,10 @@ const storyItems = [
   {
     day: "10/30",
     type: "transport",
-    title: "B 團送機",
+    title: "A團回國，B團送機",
     time: "09:30 出發；12:15 BR105",
     city: "福岡機場",
-    image: "./assets/images/hero-yufuin-train.jpg",
+    image: "./assets/images/return-flight-sunset.jpg",
     details: [
       "飯店早餐後 check-out",
       "搭乘 GO Taxi 前往福岡機場國際航廈",
