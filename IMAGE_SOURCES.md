@@ -54,11 +54,18 @@ This site combines images exported from the trip planning Google Doc with a few 
   - URL: https://commons.wikimedia.org/wiki/File:Hita-bussenter.jpg
 
 - `assets/images/hita-station-shuttle.webp`
-  - Used for: 10/28 日田站前等候飯店接駁車
+  - Previously used for: 10/28 日田站前等候飯店接駁車; retained but no longer shown
   - Source: Wikimedia Commons, "Hita Station 20161231.jpg" (station photo, not the shuttle vehicle)
   - Author: そらみみ
   - License: CC BY-SA 4.0; resized and converted to WebP
   - URL: https://commons.wikimedia.org/wiki/File:Hita_Station_20161231.jpg
+
+- `assets/images/hita-station-2024.webp`
+  - Used for: 10/28 日田站前等候飯店接駁車
+  - Source: Wikimedia Commons, "(JPN-Oita) Hita Station 2024-11-15.jpg" (station photo, not the shuttle vehicle)
+  - Author: S5A-0043
+  - License: CC BY 4.0; resized and converted to WebP
+  - URL: https://commons.wikimedia.org/wiki/File:(JPN-Oita)_Hita_Station_2024-11-15.jpg
 
 - `assets/images/umehibiki-dinner.webp`
   - Used for: 10/28 梅響飯店日式和牛懷石晚餐
@@ -66,9 +73,15 @@ This site combines images exported from the trip planning Google Doc with a few 
   - URL: https://www.umehibiki.jp/en/files/images/home/img_cuisine.png
 
 - `assets/images/umehibiki-breakfast.webp`
-  - Used for: 10/29 梅響飯店日式包廂早餐
+  - Previously used for: 10/29 梅響飯店日式包廂早餐; retained but no longer shown
   - Source: Okuhita Onsen Umehibiki official website (representative breakfast; actual menu may vary)
   - URL: https://www.umehibiki.jp/en/dishes/images/img_breakfast01.jpg
+
+- `assets/images/umehibiki-breakfast-user.webp`
+  - Used for: 10/29 梅響飯店日式包廂早餐
+  - Source: Travel organizer's photo shared for this website via Google Photos
+  - Processing: resized and converted to WebP
+  - URL: https://photos.app.goo.gl/TDMG8wS14koxfWSVA
 
 - `assets/images/umehibiki-entrance.webp`
   - Used for: 10/29 飯店接駁車前往日田站

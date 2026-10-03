@@ -95,7 +95,7 @@ const storyItems = [
     title: "日田站前等候飯店接駁車",
     time: "16:15",
     city: "日田站 / 奧日田溫泉",
-    image: "./assets/images/hita-station-shuttle.webp",
+    image: "./assets/images/hita-station-2024.webp",
     description:
       "15:53 抵達日田後，在火車站前等候飯店接駁車，前往奧日田溫泉 梅響。從車站轉進山谷，溫泉之夜就要開始。"
   },
@@ -130,9 +130,9 @@ const storyItems = [
     title: "梅響飯店日式包廂早餐",
     time: "08:00",
     city: "奧日田溫泉 梅響",
-    image: "./assets/images/umehibiki-breakfast.webp",
+    image: "./assets/images/umehibiki-breakfast-user.webp",
     description:
-      "在飯店的日式包廂享用早餐，從一桌細緻的日式餐點開始新的一天。照片為飯店早餐示意，實際菜色依當日供應為準。"
+      "在飯店的日式包廂享用早餐，從一桌細緻的日式餐點開始新的一天。照片由旅伴於梅響拍攝，實際菜色依當日供應為準。"
   },
   {
     day: "10/29",
