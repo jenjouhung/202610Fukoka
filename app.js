@@ -161,22 +161,22 @@ const storyItems = [
       {
         title: "福岡 PARCO",
         items: [
-          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?id=7211\" target=\"_blank\" rel=\"noopener noreferrer\">麵屋兼虎</a>：沾麵",
-          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?id=1688\" target=\"_blank\" rel=\"noopener noreferrer\">博多もつ鍋 おおやま</a>：牛腸鍋",
-          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=025285\" target=\"_blank\" rel=\"noopener noreferrer\">たんやHAKATA</a>：牛舌定食",
-          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=9806\" target=\"_blank\" rel=\"noopener noreferrer\">博多天ぷら たかお</a>：天婦羅定食",
-          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=026595\" target=\"_blank\" rel=\"noopener noreferrer\">博多らーめん Shin-Shin</a>：拉麵",
-          "新館 B2F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=25294\" target=\"_blank\" rel=\"noopener noreferrer\">牛かつ もと村</a>：炸牛排"
+          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?id=7211\">麵屋兼虎</a>：沾麵",
+          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?id=1688\">博多もつ鍋 おおやま</a>：牛腸鍋",
+          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=025285\">たんやHAKATA</a>：牛舌定食",
+          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=9806\">博多天ぷら たかお</a>：天婦羅定食",
+          "本館 B1F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=026595\">博多らーめん Shin-Shin</a>：拉麵",
+          "新館 B2F｜<a href=\"https://fukuoka.parco.jp/shop/detail/?cd=25294\">牛かつ もと村</a>：炸牛排"
         ]
       },
       {
         title: "Solaria Stage",
         items: [
-          "B2F｜<a href=\"https://www.solariastage.com/shops/uokichi/\" target=\"_blank\" rel=\"noopener noreferrer\">博多海鮮食堂 魚吉</a>：海鮮與定食",
-          "B2F｜<a href=\"https://www.solariastage.com/shops/katsushin/\" target=\"_blank\" rel=\"noopener noreferrer\">博多とんかつ処 かつ心</a>：豬排",
-          "B2F｜<a href=\"https://www.solariastage.com/shops/omiki_chaya/\" target=\"_blank\" rel=\"noopener noreferrer\">菊正宗おみき茶屋</a>：日式定食",
-          "2F｜<a href=\"https://www.solariastage.com/shops/yariudon/\" target=\"_blank\" rel=\"noopener noreferrer\">博多やりうどん</a>：博多烏龍麵",
-          "2F｜<a href=\"https://www.solariastage.com/shops/fugetsu/\" target=\"_blank\" rel=\"noopener noreferrer\">グルメ風月</a>：鐵板料理"
+          "B2F｜<a href=\"https://www.solariastage.com/shops/uokichi/\">博多海鮮食堂 魚吉</a>：海鮮與定食",
+          "B2F｜<a href=\"https://www.solariastage.com/shops/katsushin/\">博多とんかつ処 かつ心</a>：豬排",
+          "B2F｜<a href=\"https://www.solariastage.com/shops/omiki_chaya/\">菊正宗おみき茶屋</a>：日式定食",
+          "2F｜<a href=\"https://www.solariastage.com/shops/yariudon/\">博多やりうどん</a>：博多烏龍麵",
+          "2F｜<a href=\"https://www.solariastage.com/shops/fugetsu/\">グルメ風月</a>：鐵板料理"
         ]
       }
     ]
@@ -281,7 +281,7 @@ function renderStory() {
           card.innerHTML = `
             ${photos.length ? `<div class="story-card__gallery story-card__gallery--${photos.length}">
               ${photos
-                .map((photo, index) => `<img class="story-card__photo" src="${photo}" alt="${item.title}照片 ${index + 1}" loading="lazy" decoding="async">`)
+                .map((photo, index) => `<button class="story-card__photo" type="button" aria-label="放大檢視${item.title}照片 ${index + 1}" data-photo="${photo}" data-alt="${item.title}照片 ${index + 1}"><img src="${photo}" alt="${item.title}照片 ${index + 1}" loading="lazy" decoding="async"></button>`)
                 .join("")}
             </div>` : ""}
             <div class="story-card__body">
@@ -308,3 +308,19 @@ function render() {
 }
 
 render();
+
+const photoDialog = $("#photoDialog");
+const enlargedPhoto = $("#enlargedPhoto");
+
+$("#storyList").addEventListener("click", (event) => {
+  const photoButton = event.target.closest(".story-card__photo");
+  if (!photoButton) return;
+  enlargedPhoto.src = photoButton.dataset.photo;
+  enlargedPhoto.alt = photoButton.dataset.alt;
+  photoDialog.showModal();
+});
+
+$("#closePhotoDialog").addEventListener("click", () => photoDialog.close());
+photoDialog.addEventListener("click", (event) => {
+  if (event.target === photoDialog) photoDialog.close();
+});
