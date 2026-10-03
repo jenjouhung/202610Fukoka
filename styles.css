@@ -216,7 +216,8 @@ main {
 }
 
 .story-card__body {
-  padding: 16px;
+  padding: 18px;
+  font-size: 1.5rem;
 }
 
 .tag-row {
@@ -234,7 +235,7 @@ main {
   padding: 0 10px;
   background: var(--green-soft);
   color: #14553e;
-  font-size: 0.82rem;
+  font-size: 1.125rem;
   font-weight: 900;
 }
 
@@ -255,8 +256,9 @@ main {
 
 .story-card h3 {
   margin-bottom: 6px;
-  font-size: 1.35rem;
+  font-size: 2rem;
   line-height: 1.22;
+  overflow-wrap: anywhere;
 }
 
 .meta {
@@ -274,7 +276,7 @@ main {
   display: grid;
   gap: 8px;
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
   color: #35423e;
   font-weight: 650;
 }
