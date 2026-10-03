@@ -1,5 +1,3 @@
-const mapSearch = (query) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-
 const categories = {
   all: "全部",
   hotel: "住宿",
@@ -126,32 +124,9 @@ const storyItems = [
   }
 ];
 
-const locations = [
-  { day: "10/28", type: "transport", city: "福岡", name: "抵達福岡機場", query: "Fukuoka Airport international terminal pillar 12", note: "A 團 10:00 抵達、B 團 11:15 抵達。12:00 在福岡機場 12 號柱集合，叫 Uber 或 GO Taxi XL 前往 KITTE 博多。" },
-  { day: "10/28", type: "food", city: "福岡", name: "敘敘苑 KITTE 博多店", query: "叙々苑 KITTE博多店", note: "10F，午餐預約 13:00。" },
-  { day: "10/28", type: "transport", city: "博多 / 日田", name: "由布院之森 5 往日田", query: "JR Hakata Station", note: "14:38 從 JR 博多站搭乘由布院之森 5 往日田，通常是第五月台；15:53 抵達日田，16:15 搭乘旅館接駁車。" },
-  { day: "10/28", type: "hotel", city: "日田", name: "奧日田溫泉 梅響", query: "奥日田温泉 うめひびき", note: "17:40 抵達，晚餐為和牛懷石料理。" },
-  { day: "10/29", type: "transport", city: "日田 / 福岡", name: "日田往天神高速巴士", query: "Hita Bus Terminal", note: "12:05 從日田 Bus Terminal 搭乘高速巴士前往天神，13:39 抵達西鐵天神高速 Bus Terminal。" },
-  { day: "10/29", type: "hotel", city: "福岡", name: "THE GATE HOTEL FUKUOKA by HULIC", query: "THE GATE HOTEL FUKUOKA by HULIC", note: "14:00 Check-in。地下鐵天神站 5 號出口直接連通。" },
-  { day: "10/29", type: "shopping", city: "福岡", name: "天神地下街", query: "天神地下街 福岡", note: "15:00 起逛街採買，串聯地鐵、百貨與商場。" },
-  { day: "10/29", type: "shopping", city: "福岡", name: "Mina 天神", query: "Mina Tenjin Fukuoka", note: "3COINS、UNIQLO TENJIN、GU。" },
-  { day: "10/29", type: "shopping", city: "福岡", name: "無印良品 天神ショッパーズ福岡店", query: "無印良品 天神ショッパーズ福岡店", note: "由 Mina 天神一樓走過去，就在旁邊。" },
-  { day: "10/29", type: "shopping", city: "福岡", name: "福岡 PARCO", query: "Fukuoka PARCO", note: "藥妝與多個午晚餐選擇。" },
-  { day: "10/29", type: "food", city: "福岡", name: "麵屋兼虎 福岡 PARCO", query: "麺や兼虎 福岡パルコ", note: "福岡熱門沾麵，柴魚味重。" },
-  { day: "10/29", type: "food", city: "福岡", name: "博多天ぷら たかお PARCO", query: "博多天ぷら たかお 福岡パルコ店", note: "天婦羅定食。" },
-  { day: "10/29", type: "food", city: "福岡", name: "一蘭拉麵本店", query: "一蘭 本社総本店 福岡", note: "晚上 20:00-20:15 有表演。" },
-  { day: "10/30", type: "transport", city: "福岡", name: "B 團送機", query: "Fukuoka Airport International Terminal", note: "09:30 從飯店 check-out，搭乘 GO Taxi 到福岡機場國際航廈。10:30 Check-in；12:15 長榮 BR105 回台北，13:50 抵達桃園國際機場第二航廈。" }
-].map((item) => ({
-  ...item,
-  url: mapSearch(item.query)
-}));
-
 const state = {
   storyDay: "all",
-  storyType: "all",
-  navDay: "all",
-  navType: "all",
-  search: ""
+  storyType: "all"
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -182,24 +157,6 @@ function renderFilters() {
     ...typeOptions.map((type) =>
       makeButton(type.label, state.storyType === type.id, () => {
         state.storyType = type.id;
-        render();
-      })
-    )
-  );
-
-  $("#dayFilters").replaceChildren(
-    ...dayOptions.map((day) =>
-      makeButton(day.label, state.navDay === day.id, () => {
-        state.navDay = day.id;
-        render();
-      })
-    )
-  );
-
-  $("#typeFilters").replaceChildren(
-    ...typeOptions.map((type) =>
-      makeButton(type.label, state.navType === type.id, () => {
-        state.navType = type.id;
         render();
       })
     )
@@ -257,53 +214,9 @@ function renderStory() {
   );
 }
 
-function renderLocations() {
-  const keyword = state.search.trim().toLowerCase();
-  const items = locations.filter((item) => {
-    const haystack = `${item.day} ${item.type} ${item.city} ${item.name} ${item.query} ${item.note}`.toLowerCase();
-    return (
-      (state.navDay === "all" || item.day === state.navDay) &&
-      (state.navType === "all" || item.type === state.navType) &&
-      (!keyword || haystack.includes(keyword))
-    );
-  });
-
-  if (!items.length) {
-    $("#locationList").innerHTML = `<div class="empty">目前沒有符合條件的導航地點。</div>`;
-    return;
-  }
-
-  $("#locationList").replaceChildren(
-    ...items.map((item) => {
-      const card = document.createElement("article");
-      card.className = "location-card";
-      card.innerHTML = `
-        <div class="tag-row">
-          <span class="tag ${typeClass[item.type] || ""}">${categories[item.type]}</span>
-          <span class="tag">${item.day}</span>
-          <span class="tag">${item.city}</span>
-        </div>
-        <h3>${item.name}</h3>
-        <div class="meta">${item.query}</div>
-        <p>${item.note}</p>
-        <div class="action-row">
-          <a class="map-link" href="${item.url}" target="_blank" rel="noreferrer">開啟地圖</a>
-        </div>
-      `;
-      return card;
-    })
-  );
-}
-
 function render() {
   renderFilters();
   renderStory();
-  renderLocations();
 }
-
-$("#searchInput").addEventListener("input", (event) => {
-  state.search = event.target.value;
-  renderLocations();
-});
 
 render();

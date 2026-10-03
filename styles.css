@@ -105,7 +105,7 @@ main {
 
 .mode-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px;
   margin-bottom: 16px;
 }
@@ -141,10 +141,6 @@ main {
   background: linear-gradient(135deg, #fffef8, var(--green-soft));
 }
 
-.mode-card--nav {
-  background: linear-gradient(135deg, #fdfcff, var(--blue-soft));
-}
-
 .panel {
   scroll-margin-top: 12px;
   margin-top: 16px;
@@ -159,27 +155,6 @@ main {
   margin-bottom: 0;
   font-size: clamp(2rem, 8vw, 3.8rem);
   line-height: 1.08;
-}
-
-.search-box {
-  display: grid;
-  gap: 8px;
-  margin: 12px 0 14px;
-  color: var(--muted);
-  font-weight: 850;
-}
-
-.search-box input {
-  width: 100%;
-  min-height: 58px;
-  padding: 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  font: inherit;
-  font-size: 1.1rem;
-  font-weight: 750;
 }
 
 .filter-row {
@@ -212,13 +187,11 @@ main {
   color: #fff;
 }
 
-.filter-row--type .filter-button.is-active,
-#typeFilters .filter-button.is-active {
+.filter-row--type .filter-button.is-active {
   background: var(--blue);
 }
 
-.story-list,
-.location-list {
+.story-list {
   display: grid;
   gap: 12px;
 }
@@ -249,8 +222,7 @@ main {
   font-weight: 850;
 }
 
-.story-card,
-.location-card {
+.story-card {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -266,8 +238,7 @@ main {
   background-position: center;
 }
 
-.story-card__body,
-.location-card {
+.story-card__body {
   padding: 16px;
 }
 
@@ -305,8 +276,7 @@ main {
   color: var(--blue);
 }
 
-.story-card h3,
-.location-card h3 {
+.story-card h3 {
   margin-bottom: 6px;
   font-size: 1.35rem;
   line-height: 1.22;
@@ -318,34 +288,9 @@ main {
   font-weight: 800;
 }
 
-.story-card p,
-.location-card p {
+.story-card p {
   color: #35423e;
   font-weight: 650;
-}
-
-.action-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.map-link {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  padding: 0 14px;
-  background: var(--ink);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 900;
-}
-
-.map-link--parking {
-  background: var(--blue);
 }
 
 .empty {
