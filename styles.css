@@ -230,6 +230,21 @@ main {
   box-shadow: 0 4px 16px rgba(31, 40, 35, 0.07);
 }
 
+.story-card__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--line);
+}
+
+.story-card__gallery--1 {
+  grid-template-columns: 1fr;
+}
+
+.story-card__gallery--3 .story-card__photo:first-child {
+  grid-row: span 2;
+}
+
 .story-card__photo {
   min-height: 188px;
   background: var(--green-soft);
@@ -320,6 +335,10 @@ footer {
   }
 
   .story-card__photo {
+    min-height: 124px;
+  }
+
+  .story-card__gallery--1 .story-card__photo {
     min-height: 152px;
   }
 }

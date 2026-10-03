@@ -59,6 +59,7 @@ const storyItems = [
     time: "13:00 預約午餐",
     city: "福岡",
     image: "./assets/images/jojoen-kitte.png",
+    images: ["./assets/images/jojoen-kitte.png", "./assets/images/jojoen-kitte-2.png"],
     description:
       "「敘敘苑」是日本知名的高級燒肉品牌，以講究肉質、細緻服務與舒適用餐環境聞名。KITTE 博多店位於博多車站旁 KITTE 博多 10 樓，交通非常方便，部分座位還可眺望博多站周邊景色。午餐價格相較晚餐較容易入手，很適合安排成福岡行程中較精緻的一餐。"
   },
@@ -69,6 +70,11 @@ const storyItems = [
     time: "14:38 博多出發，15:53 抵達日田",
     city: "博多 / 日田",
     image: "./assets/images/yufuin-no-mori-1.png",
+    images: [
+      "./assets/images/yufuin-no-mori-1.png",
+      "./assets/images/yufuin-no-mori-2.png",
+      "./assets/images/yufuin-no-mori-3.png"
+    ],
     description:
       "「由布院之森」是 JR 九州極具代表性的 D&S 觀光列車，以深綠色車身呼應由布院的森林與自然景觀。車內大量運用木質元素，搭配挑高式車廂與大片車窗，沿途可欣賞筑後川、山林、慈恩瀑布與由布岳等景色，列車本身就是旅程的一部分。"
   },
@@ -79,6 +85,11 @@ const storyItems = [
     time: "17:40 抵達",
     city: "日田",
     image: "./assets/images/umehibiki-1.png",
+    images: [
+      "./assets/images/umehibiki-1.png",
+      "./assets/images/umehibiki-2.png",
+      "./assets/images/umehibiki-3.png"
+    ],
     description:
       "位於大分縣日田市大山町、響溪谷旁的溫泉旅館，以「梅之鄉」大山的自然與梅文化為主題。最大魅力是壯闊的山谷景觀，從客房、露天風呂與寢湯都能眺望層疊山林。這裡不只是住宿點，本身就是旅程中的主要目的地。"
   },
@@ -99,6 +110,11 @@ const storyItems = [
     time: "14:00 Check-in",
     city: "福岡天神",
     image: "./assets/images/gate-hotel-1.png",
+    images: [
+      "./assets/images/gate-hotel-1.png",
+      "./assets/images/gate-hotel-2.png",
+      "./assets/images/gate-hotel-3.png"
+    ],
     description:
       "THE GATE HOTEL FUKUOKA by HULIC 是 2025 年 4 月開幕的新型都市飯店，位於天神核心的 HULIC SQUARE 福岡天神。飯店與福岡市地下鐵空港線天神站 5 號出口直接連通，從西鐵天神高速巴士總站步行也僅約 4 分鐘。"
   },
@@ -109,6 +125,11 @@ const storyItems = [
     time: "15:00 起",
     city: "福岡天神",
     image: "./assets/images/tenjin-chikagai-1.png",
+    images: [
+      "./assets/images/tenjin-chikagai-1.png",
+      "./assets/images/tenjin-chikagai-2.png",
+      "./assets/images/tenjin-chikagai-3.png"
+    ],
     description:
       "天神地下街是福岡天神地區重要的地下商業與交通動線，全長約 590 公尺，串聯地下鐵天神站、天神南站、西鐵福岡站與周邊百貨。以 19 世紀歐洲街道為設計意象，也是雨天逛天神最好用的移動通道。"
   },
@@ -193,9 +214,14 @@ function renderStory() {
       section.append(
         ...day.items.map((item) => {
           const card = document.createElement("article");
+          const photos = item.images || [item.image];
           card.className = "story-card";
           card.innerHTML = `
-            <div class="story-card__photo" style="--photo: url('${item.image}')"></div>
+            <div class="story-card__gallery story-card__gallery--${photos.length}">
+              ${photos
+                .map((photo) => `<div class="story-card__photo" style="--photo: url('${photo}')"></div>`)
+                .join("")}
+            </div>
             <div class="story-card__body">
               <div class="tag-row">
                 <span class="tag ${typeClass[item.type] || ""}">${categories[item.type]}</span>
