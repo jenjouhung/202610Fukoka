@@ -286,6 +286,21 @@ main {
   font-weight: 900;
 }
 
+.story-card__group {
+  margin-top: 18px;
+}
+
+.story-card__group + .story-card__group {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.story-card__group h4 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
 .empty {
   padding: 22px;
   border: 1px dashed var(--line);

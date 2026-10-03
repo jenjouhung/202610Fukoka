@@ -142,7 +142,44 @@ const storyItems = [
       "./assets/images/tenjin-chikagai-3.png"
     ],
     description:
-      "天神地下街是福岡天神地區重要的地下商業與交通動線，全長約 590 公尺，串聯地下鐵天神站、天神南站、西鐵福岡站與周邊百貨。以 19 世紀歐洲街道為設計意象，也是雨天逛天神最好用的移動通道。"
+      "天神地下街是福岡天神地區重要的地下商業與交通動線，全長約 590 公尺，串聯地下鐵天神站、天神南站、西鐵福岡站與周邊百貨。以 19 世紀歐洲街道為設計意象，也是雨天逛天神最好用的移動通道。",
+    details: [
+      "先逛天神地下街：服飾、雜貨與甜點集中；一般商店多營業至 20:00。",
+      "mina 天神：B1F 逛 3COINS＋plus，1–2F 逛 UNIQLO，3F 逛 GU。",
+      "無印良品在旁邊的天神 Shoppers Fukuoka 2F；藥妝可到 mina 天神 B1F 松本清。",
+      "晚間若還想採買，可再前往唐吉訶德天神西通店。"
+    ]
+  },
+  {
+    day: "10/29",
+    type: "food",
+    title: "10/29 天神用餐建議",
+    time: "午餐與晚餐自選",
+    city: "福岡天神",
+    description: "抵達天神後，午餐或晚餐可依當天體力與口味自行選擇。以下是行程文件列出的選項，出發前可再確認店家營業資訊。",
+    groups: [
+      {
+        title: "福岡 PARCO",
+        items: [
+          "本館 B1F｜麵屋兼虎：沾麵",
+          "本館 B1F｜博多もつ鍋 おおやま：牛腸鍋",
+          "本館 B1F｜たんやHAKATA：牛舌定食",
+          "本館 B1F｜博多天ぷら たかお：天婦羅定食",
+          "本館 B1F｜博多らーめん Shin-Shin：拉麵",
+          "新館 B2F｜牛かつ もと村：炸牛排"
+        ]
+      },
+      {
+        title: "Solaria Stage",
+        items: [
+          "B2F｜博多海鮮食堂 魚吉：海鮮與定食",
+          "B2F｜博多とんかつ処 かつ心：豬排",
+          "B2F｜菊正宗おみき茶屋：日式定食",
+          "2F｜博多やりうどん：博多烏龍麵",
+          "2F｜グルメ風月：鐵板料理"
+        ]
+      }
+    ]
   },
   {
     day: "10/30",
@@ -229,17 +266,24 @@ function renderStory() {
       section.append(
         ...day.items.map((item) => {
           const card = document.createElement("article");
-          const photos = item.images || [item.image];
-          const detailHtml = item.details
-            ? `<ul class="story-card__details">${item.details.map((detail) => `<li>${detail}</li>`).join("")}</ul>`
-            : `<p>${item.description}</p>`;
+          const photos = item.images || (item.image ? [item.image] : []);
+          const detailHtml = [
+            item.description ? `<p>${item.description}</p>` : "",
+            item.details ? `<ul class="story-card__details">${item.details.map((detail) => `<li>${detail}</li>`).join("")}</ul>` : "",
+            item.groups ? item.groups.map((group) => `
+              <section class="story-card__group">
+                <h4>${group.title}</h4>
+                <ul class="story-card__details">${group.items.map((detail) => `<li>${detail}</li>`).join("")}</ul>
+              </section>
+            `).join("") : ""
+          ].join("");
           card.className = "story-card";
           card.innerHTML = `
-            <div class="story-card__gallery story-card__gallery--${photos.length}">
+            ${photos.length ? `<div class="story-card__gallery story-card__gallery--${photos.length}">
               ${photos
                 .map((photo) => `<div class="story-card__photo" style="--photo: url('${photo}')"></div>`)
                 .join("")}
-            </div>
+            </div>` : ""}
             <div class="story-card__body">
               <div class="tag-row">
                 <span class="tag ${typeClass[item.type] || ""}">${categories[item.type]}</span>
