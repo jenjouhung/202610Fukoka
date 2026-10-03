@@ -20,10 +20,7 @@ const typeClass = {
 const days = [
   { id: "10/28", label: "10/28", title: "抵達福岡，前往溫泉" },
   { id: "10/29", label: "10/29", title: "前往博多天神" },
-  { id: "10/30", label: "10/30", title: "送機與啟程阿蘇" },
-  { id: "10/31", label: "10/31", title: "阿蘇與高千穗" },
-  { id: "11/1", label: "11/1", title: "熊本" },
-  { id: "11/2", label: "11/2", title: "熊本回程" }
+  { id: "10/30", label: "10/30", title: "送機與啟程" }
 ];
 
 const storyItems = [
@@ -33,7 +30,7 @@ const storyItems = [
     title: "A 團出發與搭機時間",
     time: "04:00 板橋出發；06:50 CI110",
     city: "桃園 / 福岡",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/hero-yufuin-train.jpg",
     description:
       "A 團 04:00 板橋機場接送出發，04:30 抵達桃園機場，05:00 Check-in 完成並協助 B 團 Check-in，05:30 最晚入關，06:10 登機。06:50 搭乘華航 CI110 自桃園機場第二航廈出發，10:00 抵達福岡。"
   },
@@ -43,7 +40,7 @@ const storyItems = [
     title: "B 團出發與搭機時間",
     time: "04:00 基隆出發；08:10 BR106",
     city: "桃園 / 福岡",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/hero-yufuin-train.jpg",
     description:
       "B 團 04:00 基隆接送出發，05:45 抵達桃園機場。Check-in 地點為第二航廈 18 號櫃台特別服務櫃台。08:10 搭乘長榮 BR106 自桃園機場第二航廈出發，座位 28D、28E，11:15 抵達福岡。"
   },
@@ -53,7 +50,7 @@ const storyItems = [
     title: "抵達福岡機場",
     time: "A 團 10:00；B 團 11:15",
     city: "福岡",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/hero-yufuin-train.jpg",
     description:
       "兩團分別搭乘華航 CI110 與長榮 BR106 抵達福岡，12:00 在福岡機場 12 號柱集合，使用 Uber 或 GO 叫 Taxi XL 前往 KITTE 博多。"
   },
@@ -63,9 +60,9 @@ const storyItems = [
     title: "敘敘苑 KITTE 博多店",
     time: "13:00 預約午餐",
     city: "福岡",
-    image: "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/jojoen-kitte.png",
     description:
-      "位於 KITTE 博多 10 樓的日式燒肉餐廳，適合安排成抵達後較精緻且交通方便的一餐。"
+      "「敘敘苑」是日本知名的高級燒肉品牌，以講究肉質、細緻服務與舒適用餐環境聞名。KITTE 博多店位於博多車站旁 KITTE 博多 10 樓，交通非常方便，部分座位還可眺望博多站周邊景色。午餐價格相較晚餐較容易入手，很適合安排成福岡行程中較精緻的一餐。"
   },
   {
     day: "10/28",
@@ -73,9 +70,9 @@ const storyItems = [
     title: "由布院之森 5 往日田",
     time: "14:38 博多出發，15:53 抵達日田",
     city: "博多 / 日田",
-    image: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/yufuin-no-mori-1.png",
     description:
-      "JR 九州代表性觀光列車，全車指定席。車內木質設計與大片車窗讓移動本身成為旅程的一部分。"
+      "「由布院之森」是 JR 九州極具代表性的 D&S 觀光列車，以深綠色車身呼應由布院的森林與自然景觀。車內大量運用木質元素，搭配挑高式車廂與大片車窗，沿途可欣賞筑後川、山林、慈恩瀑布與由布岳等景色，列車本身就是旅程的一部分。"
   },
   {
     day: "10/28",
@@ -83,9 +80,9 @@ const storyItems = [
     title: "奧日田溫泉 梅響",
     time: "17:40 抵達",
     city: "日田",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/umehibiki-1.png",
     description:
-      "位於大分縣日田市大山町、響溪谷旁的溫泉旅館。晚餐為和牛懷石料理，傍晚與清晨泡湯是本日重點。"
+      "位於大分縣日田市大山町、響溪谷旁的溫泉旅館，以「梅之鄉」大山的自然與梅文化為主題。最大魅力是壯闊的山谷景觀，從客房、露天風呂與寢湯都能眺望層疊山林。這裡不只是住宿點，本身就是旅程中的主要目的地。"
   },
   {
     day: "10/29",
@@ -93,7 +90,7 @@ const storyItems = [
     title: "日田往天神高速巴士",
     time: "12:05-13:39",
     city: "日田 / 福岡",
-    image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/tenjin-bus-terminal-route-1.png",
     description:
       "從日田 Bus Terminal 搭乘高速巴士前往西鐵天神高速 Bus Terminal，抵達後穿過天神三越與地下街前往飯店。"
   },
@@ -103,9 +100,9 @@ const storyItems = [
     title: "THE GATE HOTEL FUKUOKA by HULIC",
     time: "14:00 Check-in",
     city: "福岡天神",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/gate-hotel-1.png",
     description:
-      "2025 年開幕，位於天神核心 HULIC SQUARE 福岡天神，與地下鐵天神站 5 號出口直接連通。"
+      "THE GATE HOTEL FUKUOKA by HULIC 是 2025 年 4 月開幕的新型都市飯店，位於天神核心的 HULIC SQUARE 福岡天神。飯店與福岡市地下鐵空港線天神站 5 號出口直接連通，從西鐵天神高速巴士總站步行也僅約 4 分鐘。"
   },
   {
     day: "10/29",
@@ -113,9 +110,9 @@ const storyItems = [
     title: "天神地下街與周邊採買",
     time: "15:00 起",
     city: "福岡天神",
-    image: "https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/tenjin-chikagai-1.png",
     description:
-      "天神地下街串聯地下鐵、西鐵、百貨與商場，是雨天與帶行李時很好用的移動動線。可順逛 Mina 天神、無印良品、PARCO 與藥妝。"
+      "天神地下街是福岡天神地區重要的地下商業與交通動線，全長約 590 公尺，串聯地下鐵天神站、天神南站、西鐵福岡站與周邊百貨。以 19 世紀歐洲街道為設計意象，也是雨天逛天神最好用的移動通道。"
   },
   {
     day: "10/30",
@@ -123,129 +120,9 @@ const storyItems = [
     title: "B 團送機",
     time: "09:30 出發；12:15 BR105",
     city: "福岡機場",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    image: "./assets/images/hero-yufuin-train.jpg",
     description:
       "飯店早餐後 check-out，搭乘 GO Taxi 前往福岡機場國際航廈。10:30 Check-in，12:15 長榮 BR105 返回台北。"
-  },
-  {
-    day: "10/30",
-    type: "spot",
-    title: "大觀峰",
-    time: "15:00-16:00 視路況前往",
-    city: "阿蘇",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "10/30 唯一正式景點。若取車或路程延誤可直接取消，優先保持孩子與長輩的節奏。"
-  },
-  {
-    day: "10/30",
-    type: "hotel",
-    title: "Aso grand view",
-    time: "16:30-17:30 抵達",
-    city: "阿蘇",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "漂亮民宿本身就是下午的正式行程。抵達後不再安排景點，保留休息、看風景、泡澡與晚餐時間。"
-  },
-  {
-    day: "10/31",
-    type: "spot",
-    title: "高千穗あまてらす鉄道",
-    time: "08:45-09:00 抵達買票",
-    city: "高千穗",
-    image: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "小火車是本日第一優先。目標 9:40 或 10:20 班次，當天開園販售、先到先得，雨天或強風可能停駛。"
-  },
-  {
-    day: "10/31",
-    type: "spot",
-    title: "高千穗峽",
-    time: "10:30-11:30",
-    city: "高千穗",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "小火車優先，高千穗峽散步第二，划船不用強求。真名井瀑布與峽谷景觀本身已很值得停留。"
-  },
-  {
-    day: "10/31",
-    type: "spot",
-    title: "高千穗神社",
-    time: "12:30-13:00",
-    city: "高千穗",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "午餐後簡單走走即可，不需要拉太長時間，保留下午前往天岩戶神社與回阿蘇的節奏。"
-  },
-  {
-    day: "10/31",
-    type: "spot",
-    title: "天岩戶神社與天安河原",
-    time: "13:15-14:30",
-    city: "高千穗",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "自然步行與神話故事兼具，符合親子旅程的探索感。14:30 後開始回阿蘇，晚上不再安排景點。"
-  },
-  {
-    day: "11/1",
-    type: "spot",
-    title: "阿蘇卡德利動物樂園",
-    time: "09:45-12:00",
-    city: "阿蘇",
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "給孩子看動物、餵食與自由探索，不追求全部看完。安排約 2 至 2.25 小時即可。"
-  },
-  {
-    day: "11/1",
-    type: "spot",
-    title: "熊本城",
-    time: "14:30-16:30",
-    city: "熊本",
-    image: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "以大型戶外探索景點來看待熊本城：城牆、天守閣、高處景觀與大尺度空間，比室內博物館更適合孩子。"
-  },
-  {
-    day: "11/1",
-    type: "hotel",
-    title: "OMO5 熊本",
-    time: "17:00 入住",
-    city: "熊本",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "入住後本日收工，不再安排商場，保留晚上休息時間。"
-  },
-  {
-    day: "11/2",
-    type: "spot",
-    title: "阿蘇牛奶牧場",
-    time: "10:00-12:00",
-    city: "熊本 / 阿蘇",
-    image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "最後一天安排動物、戶外與牧場體驗，比博物館或商場更符合這趟旅行的成員需求。"
-  },
-  {
-    day: "11/2",
-    type: "spot",
-    title: "Sorayoka Park",
-    time: "14:30 左右備用",
-    city: "熊本機場旁",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "如果時間允許，可在熊本機場附近稍微活動一下，作為最後的備用戶外點。"
-  },
-  {
-    day: "11/2",
-    type: "transport",
-    title: "A 團回程航班",
-    time: "18:35 CI195",
-    city: "熊本機場",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "華航 CI195 18:35 自熊本機場起飛，20:10 抵達台北。"
   }
 ];
 
@@ -263,19 +140,7 @@ const locations = [
   { day: "10/29", type: "food", city: "福岡", name: "麵屋兼虎 福岡 PARCO", query: "麺や兼虎 福岡パルコ", note: "福岡熱門沾麵，柴魚味重。" },
   { day: "10/29", type: "food", city: "福岡", name: "博多天ぷら たかお PARCO", query: "博多天ぷら たかお 福岡パルコ店", note: "天婦羅定食。" },
   { day: "10/29", type: "food", city: "福岡", name: "一蘭拉麵本店", query: "一蘭 本社総本店 福岡", note: "晚上 20:00-20:15 有表演。" },
-  { day: "10/30", type: "transport", city: "福岡", name: "B 團送機", query: "Fukuoka Airport International Terminal", note: "09:30 從飯店 check-out，搭乘 GO Taxi 到福岡機場國際航廈。10:30 Check-in；12:15 長榮 BR105 回台北，13:50 抵達桃園國際機場第二航廈。" },
-  { day: "10/30", type: "spot", city: "阿蘇", name: "大觀峰", query: "大観峰 阿蘇", note: "15:00-16:00 視路況前往，若延誤可取消。" },
-  { day: "10/30", type: "hotel", city: "阿蘇", name: "Aso grand view", query: "Aso grand view", note: "阿蘇站附近住宿，抵達後休息、看風景、泡澡。" },
-  { day: "10/31", type: "spot", city: "高千穗", name: "高千穗あまてらす鉄道", query: "高千穂あまてらす鉄道", note: "08:45-09:00 抵達買票，目標 9:40 或 10:20 班次。" },
-  { day: "10/31", type: "spot", city: "高千穗", name: "高千穗峽", query: "高千穂峡", note: "小火車後散步，划船不用強求。" },
-  { day: "10/31", type: "spot", city: "高千穗", name: "高千穗神社", query: "高千穂神社", note: "12:30-13:00 簡單走走。" },
-  { day: "10/31", type: "spot", city: "高千穗", name: "天岩戶神社", query: "天岩戸神社", note: "13:15-14:30，與天安河原一起安排。" },
-  { day: "10/31", type: "spot", city: "高千穗", name: "天安河原", query: "天安河原", note: "自然步行與神話故事重點。" },
-  { day: "11/1", type: "spot", city: "阿蘇", name: "阿蘇卡德利動物樂園", query: "阿蘇カドリー・ドミニオン", note: "09:45-12:00，動物、餵食、自由探索。" },
-  { day: "11/1", type: "spot", city: "熊本", name: "熊本城", query: "熊本城", note: "14:30-16:30，戶外探索與天守閣景觀。" },
-  { day: "11/1", type: "hotel", city: "熊本", name: "OMO5 熊本", query: "OMO5 熊本 by 星野リゾート", note: "17:00 左右入住。" },
-  { day: "11/2", type: "spot", city: "熊本", name: "阿蘇牛奶牧場", query: "阿蘇ミルク牧場", note: "10:00-12:00，動物、戶外、牧場體驗。" },
-  { day: "11/2", type: "spot", city: "熊本", name: "Sorayoka Park", query: "そらよかパーク 熊本空港", note: "14:30 左右備用戶外點，就在熊本機場旁。" }
+  { day: "10/30", type: "transport", city: "福岡", name: "B 團送機", query: "Fukuoka Airport International Terminal", note: "09:30 從飯店 check-out，搭乘 GO Taxi 到福岡機場國際航廈。10:30 Check-in；12:15 長榮 BR105 回台北，13:50 抵達桃園國際機場第二航廈。" }
 ].map((item) => ({
   ...item,
   url: mapSearch(item.query)
