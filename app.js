@@ -30,6 +30,26 @@ const storyItems = [
   {
     day: "10/28",
     type: "transport",
+    title: "A 團出發與搭機時間",
+    time: "04:00 板橋出發；06:50 CI110",
+    city: "桃園 / 福岡",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    description:
+      "A 團 04:00 板橋機場接送出發，04:30 抵達桃園機場，05:00 Check-in 完成並協助 B 團 Check-in，05:30 最晚入關，06:10 登機。06:50 搭乘華航 CI110 自桃園機場第二航廈出發，10:00 抵達福岡。"
+  },
+  {
+    day: "10/28",
+    type: "transport",
+    title: "B 團出發與搭機時間",
+    time: "04:00 基隆出發；08:10 BR106",
+    city: "桃園 / 福岡",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    description:
+      "B 團 04:00 基隆接送出發，05:45 抵達桃園機場。Check-in 地點為第二航廈 18 號櫃台特別服務櫃台。08:10 搭乘長榮 BR106 自桃園機場第二航廈出發，座位 28D、28E，11:15 抵達福岡。"
+  },
+  {
+    day: "10/28",
+    type: "transport",
     title: "抵達福岡機場",
     time: "A 團 10:00；B 團 11:15",
     city: "福岡",
@@ -106,16 +126,6 @@ const storyItems = [
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
     description:
       "飯店早餐後 check-out，搭乘 GO Taxi 前往福岡機場國際航廈。10:30 Check-in，12:15 長榮 BR105 返回台北。"
-  },
-  {
-    day: "10/30",
-    type: "transport",
-    title: "Toyota 租車，啟程阿蘇",
-    time: "10:30-11:00 取車",
-    city: "福岡機場 / 阿蘇",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description:
-      "C2 等級 COROLLA TOURING，10/30 10:30 至 11/02 16:00。取車後以阿蘇住宿為主要目標，途中保留彈性休息與午餐。"
   },
   {
     day: "10/30",
@@ -205,7 +215,7 @@ const storyItems = [
     city: "熊本",
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
     description:
-      "入住後本日收工，不再安排商場。停車可使用辛島公園地下駐車場。"
+      "入住後本日收工，不再安排商場，保留晚上休息時間。"
   },
   {
     day: "11/2",
@@ -225,28 +235,26 @@ const storyItems = [
     city: "熊本機場旁",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
     description:
-      "若還車時間允許，可在熊本機場附近稍微活動一下，作為最後的備用戶外點。"
+      "如果時間允許，可在熊本機場附近稍微活動一下，作為最後的備用戶外點。"
   },
   {
     day: "11/2",
     type: "transport",
-    title: "熊本機場還車與回程",
-    time: "15:00-15:30 還車；18:35 CI195",
+    title: "A 團回程航班",
+    time: "18:35 CI195",
     city: "熊本機場",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
     description:
-      "15:00-15:30 還車後準備回程。華航 CI195 18:35 自熊本機場起飛，20:10 抵達台北。"
+      "華航 CI195 18:35 自熊本機場起飛，20:10 抵達台北。"
   }
 ];
 
 const locations = [
-  { day: "10/28", type: "transport", city: "福岡", name: "福岡機場 12 號柱", query: "Fukuoka Airport international terminal pillar 12", note: "12:00 集合，叫 Uber 或 GO Taxi XL 前往 KITTE 博多。" },
+  { day: "10/28", type: "transport", city: "福岡", name: "抵達福岡機場", query: "Fukuoka Airport international terminal pillar 12", note: "A 團 10:00 抵達、B 團 11:15 抵達。12:00 在福岡機場 12 號柱集合，叫 Uber 或 GO Taxi XL 前往 KITTE 博多。" },
   { day: "10/28", type: "food", city: "福岡", name: "敘敘苑 KITTE 博多店", query: "叙々苑 KITTE博多店", note: "10F，午餐預約 13:00。" },
-  { day: "10/28", type: "transport", city: "博多", name: "JR 博多站", query: "JR Hakata Station", note: "14:38 由布院之森 5 往日田，通常是第五月台。" },
-  { day: "10/28", type: "transport", city: "日田", name: "JR 日田站", query: "Hita Station Oita", note: "15:53 抵達，16:15 搭乘旅館接駁車。" },
+  { day: "10/28", type: "transport", city: "博多 / 日田", name: "由布院之森 5 往日田", query: "JR Hakata Station", note: "14:38 從 JR 博多站搭乘由布院之森 5 往日田，通常是第五月台；15:53 抵達日田，16:15 搭乘旅館接駁車。" },
   { day: "10/28", type: "hotel", city: "日田", name: "奧日田溫泉 梅響", query: "奥日田温泉 うめひびき", note: "17:40 抵達，晚餐為和牛懷石料理。" },
-  { day: "10/29", type: "transport", city: "日田", name: "日田 Bus Terminal", query: "Hita Bus Terminal", note: "12:05 搭乘高速 Bus 前往天神。" },
-  { day: "10/29", type: "transport", city: "福岡", name: "西鐵天神高速 Bus Terminal", query: "Nishitetsu Tenjin Expressway Bus Terminal", note: "13:39 抵達，往天神三越與地下街方向走。" },
+  { day: "10/29", type: "transport", city: "日田 / 福岡", name: "日田往天神高速巴士", query: "Hita Bus Terminal", note: "12:05 從日田 Bus Terminal 搭乘高速巴士前往天神，13:39 抵達西鐵天神高速 Bus Terminal。" },
   { day: "10/29", type: "hotel", city: "福岡", name: "THE GATE HOTEL FUKUOKA by HULIC", query: "THE GATE HOTEL FUKUOKA by HULIC", note: "14:00 Check-in。地下鐵天神站 5 號出口直接連通。" },
   { day: "10/29", type: "shopping", city: "福岡", name: "天神地下街", query: "天神地下街 福岡", note: "15:00 起逛街採買，串聯地鐵、百貨與商場。" },
   { day: "10/29", type: "shopping", city: "福岡", name: "Mina 天神", query: "Mina Tenjin Fukuoka", note: "3COINS、UNIQLO TENJIN、GU。" },
@@ -255,8 +263,7 @@ const locations = [
   { day: "10/29", type: "food", city: "福岡", name: "麵屋兼虎 福岡 PARCO", query: "麺や兼虎 福岡パルコ", note: "福岡熱門沾麵，柴魚味重。" },
   { day: "10/29", type: "food", city: "福岡", name: "博多天ぷら たかお PARCO", query: "博多天ぷら たかお 福岡パルコ店", note: "天婦羅定食。" },
   { day: "10/29", type: "food", city: "福岡", name: "一蘭拉麵本店", query: "一蘭 本社総本店 福岡", note: "晚上 20:00-20:15 有表演。" },
-  { day: "10/30", type: "transport", city: "福岡", name: "福岡機場國際航廈", query: "Fukuoka Airport International Terminal", note: "B 團 10:30 Check-in，12:15 BR105 回台北。" },
-  { day: "10/30", type: "transport", city: "福岡", name: "Toyota 租車 福岡機場", query: "Toyota Rent a Car Fukuoka Airport International Terminal", note: "10:30-11:00 取車，C2 等級 COROLLA TOURING。" },
+  { day: "10/30", type: "transport", city: "福岡", name: "B 團送機", query: "Fukuoka Airport International Terminal", note: "09:30 從飯店 check-out，搭乘 GO Taxi 到福岡機場國際航廈。10:30 Check-in；12:15 長榮 BR105 回台北，13:50 抵達桃園國際機場第二航廈。" },
   { day: "10/30", type: "spot", city: "阿蘇", name: "大觀峰", query: "大観峰 阿蘇", note: "15:00-16:00 視路況前往，若延誤可取消。" },
   { day: "10/30", type: "hotel", city: "阿蘇", name: "Aso grand view", query: "Aso grand view", note: "阿蘇站附近住宿，抵達後休息、看風景、泡澡。" },
   { day: "10/31", type: "spot", city: "高千穗", name: "高千穗あまてらす鉄道", query: "高千穂あまてらす鉄道", note: "08:45-09:00 抵達買票，目標 9:40 或 10:20 班次。" },
@@ -267,14 +274,11 @@ const locations = [
   { day: "11/1", type: "spot", city: "阿蘇", name: "阿蘇卡德利動物樂園", query: "阿蘇カドリー・ドミニオン", note: "09:45-12:00，動物、餵食、自由探索。" },
   { day: "11/1", type: "spot", city: "熊本", name: "熊本城", query: "熊本城", note: "14:30-16:30，戶外探索與天守閣景觀。" },
   { day: "11/1", type: "hotel", city: "熊本", name: "OMO5 熊本", query: "OMO5 熊本 by 星野リゾート", note: "17:00 左右入住。" },
-  { day: "11/1", type: "transport", city: "熊本", name: "辛島公園地下駐車場", query: "パスート24 熊本市辛島公園地下駐車場", note: "OMO5 熊本停車資訊。" },
   { day: "11/2", type: "spot", city: "熊本", name: "阿蘇牛奶牧場", query: "阿蘇ミルク牧場", note: "10:00-12:00，動物、戶外、牧場體驗。" },
-  { day: "11/2", type: "spot", city: "熊本", name: "Sorayoka Park", query: "そらよかパーク 熊本空港", note: "14:30 左右備用戶外點，就在熊本機場旁。" },
-  { day: "11/2", type: "transport", city: "熊本", name: "熊本機場", query: "Kumamoto Airport", note: "15:00-15:30 還車；18:35 華航 CI195 回台北。" }
+  { day: "11/2", type: "spot", city: "熊本", name: "Sorayoka Park", query: "そらよかパーク 熊本空港", note: "14:30 左右備用戶外點，就在熊本機場旁。" }
 ].map((item) => ({
   ...item,
-  url: mapSearch(item.query),
-  parkingUrl: mapSearch(`${item.query} parking`)
+  url: mapSearch(item.query)
 }));
 
 const state = {
@@ -419,7 +423,6 @@ function renderLocations() {
         <p>${item.note}</p>
         <div class="action-row">
           <a class="map-link" href="${item.url}" target="_blank" rel="noreferrer">開啟地圖</a>
-          <a class="map-link map-link--parking" href="${item.parkingUrl}" target="_blank" rel="noreferrer">找附近停車</a>
         </div>
       `;
       return card;
