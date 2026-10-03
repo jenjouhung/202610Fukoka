@@ -1,7 +1,6 @@
 const categories = {
   all: "全部",
   hotel: "住宿",
-  spot: "景點",
   food: "美食",
   transport: "交通",
   shopping: "購物"
@@ -11,8 +10,7 @@ const typeClass = {
   hotel: "tag--hotel",
   food: "tag--food",
   transport: "tag--transport",
-  shopping: "tag--transport",
-  spot: ""
+  shopping: "tag--transport"
 };
 
 const days = [
