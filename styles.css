@@ -308,6 +308,20 @@ main {
   font-weight: 650;
 }
 
+.story-card__details {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #35423e;
+  font-weight: 650;
+}
+
+.story-card__details li::marker {
+  color: var(--blue);
+  font-weight: 900;
+}
+
 .empty {
   padding: 22px;
   border: 1px dashed var(--line);

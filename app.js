@@ -29,8 +29,15 @@ const storyItems = [
     time: "04:00 板橋出發；06:50 CI110",
     city: "桃園 / 福岡",
     image: "./assets/images/taoyuan-t2-checkin.jpg",
-    description:
-      "A 團 04:00 板橋機場接送出發，04:30 抵達桃園機場，05:00 Check-in 完成並協助 B 團 Check-in，05:30 最晚入關，06:10 登機。06:50 搭乘華航 CI110 自桃園機場第二航廈出發，10:00 抵達福岡。"
+    details: [
+      "04:00 板橋機場接送出發",
+      "04:30 抵達桃園機場",
+      "05:00 Check-in 完成，並協助 B 團 Check-in",
+      "05:30 最晚入關",
+      "06:10 登機",
+      "06:50 搭乘華航 CI110 自桃園機場第二航廈出發",
+      "10:00 抵達福岡"
+    ]
   },
   {
     day: "10/28",
@@ -39,8 +46,14 @@ const storyItems = [
     time: "04:00 基隆出發；08:10 BR106",
     city: "桃園 / 福岡",
     image: "./assets/images/taoyuan-t2-eva-checkin.jpg",
-    description:
-      "B 團 04:00 基隆接送出發，05:45 抵達桃園機場。Check-in 地點為第二航廈 18 號櫃台特別服務櫃台。08:10 搭乘長榮 BR106 自桃園機場第二航廈出發，座位 28D、28E，11:15 抵達福岡。"
+    details: [
+      "04:00 基隆接送出發",
+      "05:45 抵達桃園機場",
+      "Check-in 地點：第二航廈 18 號櫃台特別服務櫃台",
+      "08:10 搭乘長榮 BR106 自桃園機場第二航廈出發",
+      "座位：28D、28E",
+      "11:15 抵達福岡"
+    ]
   },
   {
     day: "10/28",
@@ -140,8 +153,12 @@ const storyItems = [
     time: "09:30 出發；12:15 BR105",
     city: "福岡機場",
     image: "./assets/images/hero-yufuin-train.jpg",
-    description:
-      "飯店早餐後 check-out，搭乘 GO Taxi 前往福岡機場國際航廈。10:30 Check-in，12:15 長榮 BR105 返回台北。"
+    details: [
+      "飯店早餐後 check-out",
+      "搭乘 GO Taxi 前往福岡機場國際航廈",
+      "10:30 Check-in",
+      "12:15 搭乘長榮 BR105 返回台北"
+    ]
   }
 ];
 
@@ -215,6 +232,9 @@ function renderStory() {
         ...day.items.map((item) => {
           const card = document.createElement("article");
           const photos = item.images || [item.image];
+          const detailHtml = item.details
+            ? `<ul class="story-card__details">${item.details.map((detail) => `<li>${detail}</li>`).join("")}</ul>`
+            : `<p>${item.description}</p>`;
           card.className = "story-card";
           card.innerHTML = `
             <div class="story-card__gallery story-card__gallery--${photos.length}">
@@ -229,7 +249,7 @@ function renderStory() {
               </div>
               <h3>${item.title}</h3>
               <div class="meta">${item.time}</div>
-              <p>${item.description}</p>
+              ${detailHtml}
             </div>
           `;
           return card;
