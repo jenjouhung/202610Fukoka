@@ -46,7 +46,7 @@ const storyItems = [
     image: "./assets/images/br106-departing-taoyuan-2026.webp",
     details: [
       "04:00 基隆接送出發",
-      "05:45 抵達桃園機場",
+      "04:50 抵達桃園機場",
       "Check-in 地點：第二航廈（18 號特別服務櫃台)",
       "08:10 搭乘長榮 BR106",
       "座位：28D、28E",
