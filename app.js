@@ -225,13 +225,14 @@ const storyItems = [
     day: "10/30",
     type: "transport",
     title: "A團回國，B團送機",
-    time: "09:30 出發；12:15 BR105",
+    time: "09:00 出發；12:15 BR105",
     city: "福岡機場",
     image: "./assets/images/return-flight-sunset.webp",
     details: [
       "飯店早餐後 check-out",
       "搭乘 GO Taxi 前往福岡機場國際航廈",
-      "10:30 Check-in",
+      "10:00 Check-in 完畢",
+      "11:00 Bic Camera 在 54/55 號門附近，買保溫瓶。",
       "12:15 搭乘長榮 BR105 返回台北"
     ]
   }
